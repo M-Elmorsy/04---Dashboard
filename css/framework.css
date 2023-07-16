@@ -1,0 +1,170 @@
+/* Start Variables */
+:root {
+  --main-transition: 0.3s linear;
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
+/* End Variables */
+/* start box */
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.d-grid {
+  display: grid;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-20 {
+  gap: 20px;
+}
+/* End box */
+/* start padding + Margin */
+.p-5 {
+  padding: 10px;
+}
+.p-10 {
+  padding: 10px;
+}
+.p-15 {
+  padding: 15px;
+}
+.p-20 {
+  padding: 20px;
+}
+.m-0 {
+  margin: 0;
+}
+.m-20 {
+  margin: 20px;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+/* End padding + Margin */
+/* Start Fonts */
+.fs-14 {
+  font-size: 14px;
+}
+.txt-c {
+  text-align: center;
+}
+/* End Fonts */
+/* start color */
+.bg-white {
+  background-color: white;
+}
+.bg-blue {
+  background-color: var(--blue-color);
+}
+.c-black {
+  color: black;
+}
+.c-white{
+  color: white;
+}
+.c-grey {
+  color: var(--grey-color);
+}
+.bg-eee {
+  background-color: #eee;
+}
+/* End color */
+/* Start position */
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+/* End position */
+/* Start width + height */
+.w-full {
+  width: 100%;
+}
+.w-fit {
+  width: fit-content;
+}
+/* End width + height */
+/* start border */
+.rad-6 {
+  border-radius: 6px;
+}
+/* End border */
+/* start Media */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
+  }
+  .txt-c-mobile {
+    text-align: center;
+  }
+  .block-mobile {
+    display: block;
+  }
+}
+/* End Media */
+/* start components */
+.between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.around-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* End components */
+/* start animation */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@keyframes shine {
+  0% {
+      opacity: 0;
+      transform: scale(1);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1.5);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1);
+  }
+}
+/* End animation */
