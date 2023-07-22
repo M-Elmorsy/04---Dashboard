@@ -73,6 +73,50 @@ ul {
 }
 /* End Variables */
 /* start component */
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+.toggle-switch {
+  height: 30px;
+  width: 80px;
+  background: #ccc;
+  border-radius: 48px;
+  position: relative;
+}
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  font-weight: 900;
+  content: "\f00d";
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: white;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  color: var(--blue-color);
+  content: "\f00c";
+  left: 53px;
+}
+
+.setting :disabled {
+  cursor: no-drop;
+  background-color: #f0f2f8;
+  color: #bbb;
+}
 /* End component */
 /* start sidebar  */
 .page {
@@ -142,7 +186,7 @@ ul {
   background-color: #f6f6f6;
 }
 /* End sidebar  */
-/* start content */
+/* start Head */
 .content {
   overflow: hidden;
 }
@@ -209,7 +253,8 @@ h1::before {
   width: 120px;
   background: white;
 }
-/* End content */
+/* End Head */
+/* Start Dashboard Page */
 /* Start wrapper */
 .wrapper {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -221,8 +266,8 @@ h1::before {
     margin: 0 10px;
   }
 }
-.wrapper h2{
-  animation: mlt-color 5s linear  infinite alternate-reverse;
+.wrapper h2 {
+  animation: mlt-color 5s linear infinite alternate-reverse;
 }
 /* Start welcome widget*/
 .welcome {
@@ -284,14 +329,18 @@ h1::before {
   background-color: var(--blue-alt-color);
   animation: shine var(--main-animation);
 }
-/* End welcomewidget */
+/* End welcome widget */
 /* start Quick Draft widget*/
 .quick-draft textarea {
   resize: none;
   min-height: 180px;
 }
 .quick-draft .save {
+  background-color: var(--blue-color);
   margin: 0 15px 15px auto;
+}
+.quick-draft .save:hover {
+  background-color: var(--blue-alt-color);
 }
 /* End Quick Draft widget*/
 /* Start Yearly Targets widget*/
@@ -300,17 +349,17 @@ h1::before {
   height: 80px;
   margin-right: 15px;
 }
-.targets .target-row .details .progress{
+.targets .target-row .details .progress {
   height: 4px;
   border-radius: 6px;
 }
-.targets .target-row .details .progress > span{
+.targets .target-row .details .progress > span {
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-.targets .target-row .details .progress > span span{
+.targets .target-row .details .progress > span span {
   position: absolute;
   top: -30px;
   right: -16px;
@@ -319,7 +368,7 @@ h1::before {
   color: white;
   border-radius: 6px;
 }
-.targets .target-row .details .progress > span span:after{
+.targets .target-row .details .progress > span span:after {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -330,81 +379,81 @@ h1::before {
   border-top-color: var(--blue-color);
   transform: translateX(-50%);
 }
-.targets .money .details .progress > span span:after{
+.targets .money .details .progress > span span:after {
   border-top-color: var(--blue-color);
 }
-.targets .project .details .progress > span span:after{
+.targets .project .details .progress > span span:after {
   border-top-color: var(--orange-color);
 }
-.targets .user .details .progress > span span:after{
+.targets .user .details .progress > span span:after {
   border-top-color: var(--green-color);
 }
 .money .icon,
-.money .progress{
-background-color: rgb(0 117 255 / 20%);
+.money .progress {
+  background-color: rgb(0 117 255 / 20%);
 }
-.project .icon,
-.project .progress{
+.targets .project .icon,
+.targets .project .progress {
   background-color: rgb(245 158 11 / 20%);
 }
 .user .icon,
-.user .progress{
+.user .progress {
   background-color: rgb(34 197 94 / 20%);
 }
 /* End Yearly Targets widget*/
 /* start tickets widget*/
-.tickets .card{
+.tickets .card {
   width: calc(50% - 10px);
   border: 1px solid #ddd;
 }
-@media (max-width:767px){
-  .tickets .card{
-    width: 100%;;
+@media (max-width: 767px) {
+  .tickets .card {
+    width: 100%;
   }
 }
 /* End tickets widget*/
 /* start Latest News widget*/
-.news .news-row:not(:last-of-type){
+.news .news-row:not(:last-of-type) {
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.news .news-row img{
+.news .news-row img {
   transform: rotate(-5deg);
   transition: var(--main-transition);
 }
-.news .news-row:hover img{
+.news .news-row:hover img {
   transform: scale(1.1) rotate(0deg);
 }
-.news .news-row span{
+.news .news-row span {
   margin-left: auto;
   background: #ddd;
 }
-@media (max-width:767px){
-  .news .news-row span{
+@media (max-width: 767px) {
+  .news .news-row span {
     margin: 0 auto;
   }
 }
 /* End Latest News widget*/
 /* start tasks widget*/
-.tasks .task-row:not(:last-of-type){
+.tasks .task-row:not(:last-of-type) {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
-.tasks .delete{
+.tasks .delete {
   cursor: pointer;
   transition: var(--main-transition);
 }
-.tasks .delete:hover{
-color: var(--red-color);
+.tasks .delete:hover {
+  color: var(--red-color);
 }
-.tasks .deleted{
-text-decoration: line-through;
-opacity: 0.2;
+.tasks .deleted {
+  text-decoration: line-through;
+  opacity: 0.2;
 }
-.tasks .deleted + i{
-opacity: 0.2;
+.tasks .deleted + i {
+  opacity: 0.2;
 }
 
 /* End tasks widget*/
@@ -412,29 +461,30 @@ opacity: 0.2;
 .uploads ul li:not(:last-child) {
   margin-bottom: 25px;
 }
-.uploads ul li img{
+.uploads ul li img {
   opacity: 0.5;
   transition: var(--main-transition);
 }
-.uploads ul li:hover img{
-  transform: rotate(5deg) scale(1.1);  opacity: 1;
+.uploads ul li:hover img {
+  transform: rotate(5deg) scale(1.1);
+  opacity: 1;
 }
 /* End Uploads widget*/
 /* Start last project widget*/
 .last-project {
   overflow: hidden;
 }
-.last-project .launch-icon{
+.last-project .launch-icon {
   position: absolute;
   opacity: 0.08;
   bottom: 0;
   right: 0;
   transition: 1s;
 }
-.last-project:hover .launch-icon{
-  bottom: 300px;
+.last-project:hover .launch-icon {
+  bottom: 600px;
 }
-.last-project ul::after{
+.last-project ul::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -449,7 +499,7 @@ opacity: 0.2;
   font-weight: bold;
   position: relative;
 }
-.last-project ul li::before{
+.last-project ul li::before {
   content: "";
   position: absolute;
   left: -25px;
@@ -463,14 +513,373 @@ opacity: 0.2;
   outline: 2px solid var(--blue-color);
   z-index: 1;
 }
-.last-project ul li.done::before{
+.last-project ul li.done::before {
   background-color: var(--blue-color);
 }
-.last-project ul li.current::before{
+.last-project ul li.current::before {
   animation: change-color 0.8s infinite alternate;
 }
-.last-project ul li:last-of-type{
+.last-project ul li:last-of-type {
   margin: 0 0 0 50px;
 }
 /* End last project widget*/
+/* start Reminders widget */
+.reminders li {
+  z-index: 1;
+  transition: var(--main-transition);
+}
+.reminders li:hover {
+  color: white;
+  font-weight: bold;
+}
+.reminders li:hover span {
+  color: black;
+}
+.reminders li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.reminders li::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 100%;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.reminders li:hover::after {
+  width: 330px;
+  height: calc(100% + 4px);
+}
+.reminders li:nth-child(1):before,
+.reminders li:nth-child(1)::after {
+  background-color: var(--blue-color);
+}
+.reminders li:nth-child(2):before,
+.reminders li:nth-child(2)::after {
+  background-color: var(--green-color);
+}
+.reminders li:nth-child(3):before,
+.reminders li:nth-child(3)::after {
+  background-color: var(--orange-color);
+}
+.reminders li:nth-child(4):before,
+.reminders li:nth-child(4)::after {
+  background-color: var(--red-color);
+}
+/* End Reminders widget */
+/* start Latest Post */
+/* .......Noting */
+/* End Latest Post */
+/* Start Social Media State*/
+.social-state .box {
+  padding-left: 70px;
+}
+.social-state i {
+  width: 52px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: var(--main-transition);
+}
+.social-state i:hover {
+  transform: rotate(5deg);
+}
+.social-state .twitter {
+  background-color: rgb(29 161 242 / 20%);
+  color: #1da1f2;
+}
+.social-state .twitter i,
+.social-state .twitter a {
+  background-color: #1da1f2;
+}
+.social-state .facebook {
+  background-color: rgb(0 117 255 / 20%);
+  color: var(--blue-color);
+}
+.social-state .facebook i,
+.social-state .facebook a {
+  background-color: var(--blue-color);
+}
+.social-state .youtube {
+  background-color: rgb(244 67 54 / 20%);
+  color: var(--red-color);
+}
+.social-state .youtube i,
+.social-state .youtube a {
+  background-color: var(--red-color);
+}
+.social-state .linkedin {
+  background-color: rgb(0 119 181 / 20%);
+  color: #0077b5;
+}
+.social-state .linkedin i,
+.social-state .linkedin a {
+  background-color: #0077b5;
+}
+/* End Social Media State */
 /* End wrapper */
+/* Start Project */
+.responsive-table {
+  overflow-x: auto;
+}
+table {
+  min-width: 1000px;
+  border: 1px solid #eee;
+  border-spacing: 0px;
+}
+table td {
+  padding: 15px;
+}
+table thead td {
+  font-weight: bold;
+  background-color: #eee;
+}
+table tbody td {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  transition: var(--main-transition);
+}
+table tbody tr:hover td {
+  background-color: #faf7f6;
+}
+table tbody tr td:nth-child(4) {
+  transition: var(--main-transition);
+}
+table tbody tr:hover td:nth-child(4) {
+  text-decoration: underline;
+  font-family: "Font Awesome 6 Brands";
+}
+table img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+table img:not(:first-child) {
+  margin-left: -20px;
+  transition: var(--main-transition);
+}
+table tbody tr:hover img:not(:first-child) {
+  margin: 0;
+}
+table span.label {
+  font-size: 11px;
+}
+/* End Project */
+/* End Dashboard Page */
+/* Start settings Page */
+.settings {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin: 20px;
+}
+@media (max-width: 767px) {
+  .settings {
+    grid-template-columns: minmax(200px, 1fr);
+    margin: 0 10px;
+  }
+}
+.settings h2 {
+  animation: mlt-color 5s linear infinite alternate-reverse;
+}
+/* Start settings Page */
+/* Start General Control */
+/* Start Site Control */
+.site-control textarea {
+  resize: none;
+  height: 150px;
+}
+.site-control textarea::placeholder {
+  transition: var(--main-transition);
+}
+.site-control textarea:focus::placeholder {
+  opacity: 0;
+}
+/* End Site Control */
+.general-control input::placeholder {
+  transition: var(--main-transition);
+}
+.general-control input:focus::placeholder {
+  opacity: 0;
+}
+.general-control textarea::placeholder {
+  transition: var(--main-transition);
+}
+.general-control textarea:focus::placeholder {
+  opacity: 0;
+}
+.general-control button {
+  color: var(--blue-color);
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* End General Control */
+/* Start Security Info */
+.security-info > div:not(:last-child) {
+  border-bottom: 1px solid #f0f4f8;
+  padding-bottom: 21px;
+}
+.security-info button {
+  font-size: 14px;
+  font-family: cursive;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+/* End Security Info */
+/* Start Social info */
+.social-info > div i {
+  height: 40px;
+  width: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  transition: var(--main-transition);
+}
+.social-info > div input {
+  height: 40px;
+  width: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-radius: 0 6px 6px 0;
+  padding-left: 15px;
+}
+.social-info ::placeholder {
+  color: #777;
+  transition: var(--main-transition);
+}
+.social-info input:focus::placeholder {
+  opacity: 0;
+}
+.social-info div:nth-of-type(1):focus-within i {
+  color: #1da1f2;
+}
+.social-info div:nth-of-type(2):focus-within i {
+  color: var(--blue-color);
+}
+.social-info div:nth-of-type(3):focus-within i {
+  color: #0077b5;
+}
+.social-info div:nth-of-type(4):focus-within i {
+  color: var(--red-color);
+}
+/* End Social info */
+/* Start Widgets Control */
+.widget-control .control input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.widget-control .control label {
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+.widget-control .control label::before,
+.widget-control .control label::after{
+  top: 50%;
+  left: 0;
+  position: absolute;
+  border-radius: 6px;
+  margin-top: -8.5px;
+}
+.widget-control .control label::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--grey-color);
+  transition: var(--blue-alt-color);
+}
+.widget-control .control label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+.widget-control .control label::after {
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "FontAwesome";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 19px;
+  height: 19px;
+  background: var(--blue-color);
+  color: white;
+  transform: scale(0) rotate(360deg);
+  transition: var(--main-transition);
+}
+.widget-control .control input[type="checkbox"]:checked + label::after {
+  transform: scale(1) rotate(0);
+}
+/* End Widgets Control */
+/* Start Backup Manger */
+.backup-manger input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.backup-manger .control label{
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.backup-manger .control label::before{
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--grey-color);
+  top: 50%;
+  left: 0;
+  margin-top: -11px;
+  transition: var(--main-transition);
+}
+.backup-manger .control input[type="radio"]:checked + label::before{
+  border-color: var(--blue-color);
+}
+.backup-manger .control label:hover::before{
+  border-color: var(--blue-alt-color);
+}
+.backup-manger .control label::after{
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+  top: 5px;
+  left: 5px;
+  transform: scale(0);
+  transition: var(--main-transition);
+}
+.backup-manger .control input[type="radio"]:checked + label::after{
+  transform: scale(1);
+}
+@media (max-width:767px){
+  .backup-manger .servers {
+    flex-wrap: wrap;
+  }
+}
+.backup-manger .servers .server {
+  border: 2px solid var(--grey-color);
+  /* position: relative; */
+}
+.backup-manger .servers .server label{
+  cursor: pointer;
+}
+.backup-manger .servers input[type="radio"]:checked + .server{
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+/* End Backup Manger */
+/* End Sittings Page */
