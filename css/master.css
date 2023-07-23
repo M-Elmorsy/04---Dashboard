@@ -883,3 +883,176 @@ table span.label {
 }
 /* End Backup Manger */
 /* End Sittings Page */
+/* Start Profile Page */
+/* Start information widget */
+@media (max-width:767px){
+  .info{
+    flex-direction: column;
+  }
+}
+.info .avatar .progress {
+  position: relative;
+  background-color: #c9d1d9;
+  width: 140px;
+  height: 4px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.info .avatar .progress span {
+  position: absolute;
+  background-color: var(--blue-color);
+  height: 100%;
+  left: 0;
+  border-radius: 10px;
+}
+.info .about .box{
+  flex-wrap: wrap;
+  transition: var(--main-transition);
+}
+.info .about .box:hover{
+  background-color: #eee;
+}
+.info .about .box:not(:last-of-type){
+  border-bottom: 2px solid #eee;
+}
+.info .about .box > div {
+  min-width: 250px;
+  padding: 10px 0 0;
+}
+.info .about .box > div label .toggle-switch{
+height: 20px;
+}
+@media (max-width: 767px){
+  .info .about .box > div label .toggle-switch{
+    margin: 0 auto;
+    }
+}
+.info .about .box > div label .toggle-switch::before{
+width: 16px;
+height: 16px;
+top: 2px;
+}
+.info .about .box > div label .toggle-checkbox:checked + .toggle-switch::before {
+  left: 61px;
+}
+@media (min-width: 768px){
+.info .about::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 2px;
+  height: calc(100% - 50px);
+  background-color: #eee;
+}
+}
+/* End information widget */
+/* Start Other Data */
+/* Start Skills */
+/* ** Noting **/
+/* End Skills */
+/* Start Activities */
+.activities .row-activities{
+  margin-bottom: 15px;
+}
+@media (max-width:767px){
+  .activities .row-activities {
+  flex-direction: column;
+  }
+}
+.activities .row-activities img{
+  margin-right: 10px;
+}
+.activities .row-activities .date{
+  margin-left: auto;
+  text-align: right;
+}
+@media (max-width:767px){
+  .activities .row-activities img{
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .activities .row-activities .date{
+    margin-top: 20px;
+  }
+}
+/* End Activities */
+/* End Other Data */
+/* End Profile Page */
+/* Start Projects Page */
+.projects-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin: 20px;
+}
+@media (max-width: 767px) {
+  .projects-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin: 0 10px;
+  }
+}
+.projects-page .widget-dash > span{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+@media (max-width: 767px) {
+  .projects-page .widget-dash .team{
+    display: flex;
+    gap: 20px;
+  justify-content: center;
+  }
+  .projects-page .widget-dash a:not(:first-of-type) img{
+  margin-left: 0;
+  }
+  .projects-page .widget-dash:hover a:hover img{
+    transform: scale(1.5);
+  }
+  .projects-page .widget-dash .skills{
+    flex-wrap: wrap;
+justify-content: center;
+  }
+  .projects-page .widget-dash .skills span:not(:last-of-type){
+    margin-bottom: 5px;
+  }
+}
+.projects-page .widget-dash .team{
+  position: relative;
+  min-height: 80px;
+}
+.projects-page .widget-dash .team a{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.projects-page .widget-dash .team a:nth-child(2){
+  left:25px ;
+}
+.projects-page .widget-dash .team a:nth-child(3){
+  left:50px ;
+}
+.projects-page .widget-dash .team a:nth-child(4){
+  left:75px;
+}
+.projects-page .widget-dash .team a:nth-child(5){
+  left: 100px ;
+}
+.projects-page .widget-dash .team a:hover{
+  z-index: 1000;
+}
+.projects-page .widget-dash .team img{
+  border: 2px solid white;
+}
+
+.projects-page .widget-dash .progress{
+  width: 200px;
+  height: 8px;
+}
+.projects-page .widget-dash .progress span{
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+/* End Projects Page */

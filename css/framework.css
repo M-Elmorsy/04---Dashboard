@@ -42,10 +42,6 @@ ul {
 .d-flex {
   display: flex;
 }
-.align-center {
-  display: flex;
-  align-items: center;
-}
 .space-between {
   justify-content: space-between;
 }
@@ -54,6 +50,9 @@ ul {
 }
 .flex1 {
   flex: 1;
+}
+.flex2 {
+  flex: 2;
 }
 .d-grid {
   display: grid;
@@ -66,6 +65,12 @@ ul {
 }
 .gap-20 {
   gap: 20px;
+}
+.gap-50 {
+  gap: 50px;
+}
+.gap-100 {
+  gap: 100px;
 }
 /* End box */
 /* start (pm) padding + Margin */
@@ -98,6 +103,12 @@ ul {
 }
 .pb-20 {
   padding-bottom: 20px;
+}
+.pl-5 {
+  padding-left: 5px;
+}
+.pl-10 {
+  padding-left: 10px;
 }
 .pl-20 {
   padding-left: 20px;
@@ -156,6 +167,12 @@ ul {
 .mr-30 {
   margin-right: 30px;
 }
+.mr-100 {
+  margin-right: 100px;
+}
+.mr-150 {
+  margin-right: 150px;
+}
 .mb-5 {
   margin-bottom: 5px;
 }
@@ -180,6 +197,24 @@ ul {
 .mb-40 {
   margin-bottom: 40px;
 }
+.ml-auto {
+  margin-left: auto;
+}
+.ml--30 {
+  margin-left: -30px;
+}
+.ml--25 {
+  margin-left: -25px;
+}
+.ml--20 {
+  margin-left: -20px;
+}
+.ml--10 {
+  margin-left: -10px;
+}
+.ml--5 {
+  margin-left: -5px;
+}
 .ml-5 {
   margin-left: 5px;
 }
@@ -197,6 +232,9 @@ ul {
 }
 .ml-40 {
   margin-left: 40px;
+}
+.ml-100 {
+  margin-left: 100px;
 }
 /* End padding + Margin */
 /* start (bo) border + outline */
@@ -240,6 +278,9 @@ ul {
 }
 .fw-bold {
   font-weight: bold;
+}
+.fw-normal {
+  font-weight: normal;
 }
 .txt-c {
   text-align: center;
@@ -288,6 +329,9 @@ line-height: 1.5;
 .c-black {
   color: black;
 }
+.c-star {
+  color: #ffa700;
+}
 .c-white {
   color: white;
 }
@@ -334,8 +378,20 @@ line-height: 1.5;
 .img-30 {
   height: 30px;
 }
+.img-35 {
+  height: 35px;
+}
+.img-40 {
+  height: 40px;
+}
 .img-50 {
   height: 50px;
+}
+.img-60 {
+  height: 60px;
+}
+.img-70 {
+  height: 70px;
 }
 .img-80 {
   height: 80px;
@@ -390,7 +446,7 @@ line-height: 1.5;
   .block-mobile {
     display: block;
   }
-  .flex-col-mobile {
+  .col-mobile {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -414,8 +470,16 @@ line-height: 1.5;
   align-items: center;
   justify-content: space-around;
 }
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.end-center {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
 .span-btn {
-  margin-left: auto;
   font-size: 13px;
   background: #ddd;
   border-radius: 6px;
