@@ -786,7 +786,7 @@ table span.label {
   position: relative;
 }
 .widget-control .control label::before,
-.widget-control .control label::after{
+.widget-control .control label::after {
   top: 50%;
   left: 0;
   position: absolute;
@@ -827,12 +827,12 @@ table span.label {
   -webkit-appearance: none;
   appearance: none;
 }
-.backup-manger .control label{
+.backup-manger .control label {
   position: relative;
   cursor: pointer;
   padding-left: 30px;
 }
-.backup-manger .control label::before{
+.backup-manger .control label::before {
   content: "";
   position: absolute;
   width: 18px;
@@ -844,13 +844,13 @@ table span.label {
   margin-top: -11px;
   transition: var(--main-transition);
 }
-.backup-manger .control input[type="radio"]:checked + label::before{
+.backup-manger .control input[type="radio"]:checked + label::before {
   border-color: var(--blue-color);
 }
-.backup-manger .control label:hover::before{
+.backup-manger .control label:hover::before {
   border-color: var(--blue-alt-color);
 }
-.backup-manger .control label::after{
+.backup-manger .control label::after {
   content: "";
   position: absolute;
   width: 12px;
@@ -862,10 +862,10 @@ table span.label {
   transform: scale(0);
   transition: var(--main-transition);
 }
-.backup-manger .control input[type="radio"]:checked + label::after{
+.backup-manger .control input[type="radio"]:checked + label::after {
   transform: scale(1);
 }
-@media (max-width:767px){
+@media (max-width: 767px) {
   .backup-manger .servers {
     flex-wrap: wrap;
   }
@@ -874,10 +874,10 @@ table span.label {
   border: 2px solid var(--grey-color);
   /* position: relative; */
 }
-.backup-manger .servers .server label{
+.backup-manger .servers .server label {
   cursor: pointer;
 }
-.backup-manger .servers input[type="radio"]:checked + .server{
+.backup-manger .servers input[type="radio"]:checked + .server {
   border-color: var(--blue-color);
   color: var(--blue-color);
 }
@@ -885,8 +885,8 @@ table span.label {
 /* End Sittings Page */
 /* Start Profile Page */
 /* Start information widget */
-@media (max-width:767px){
-  .info{
+@media (max-width: 767px) {
+  .info {
     flex-direction: column;
   }
 }
@@ -907,47 +907,53 @@ table span.label {
   left: 0;
   border-radius: 10px;
 }
-.info .about .box{
+.info .about .box {
   flex-wrap: wrap;
   transition: var(--main-transition);
 }
-.info .about .box:hover{
+.info .about .box:hover {
   background-color: #eee;
 }
-.info .about .box:not(:last-of-type){
+.info .about .box:not(:last-of-type) {
   border-bottom: 2px solid #eee;
 }
 .info .about .box > div {
   min-width: 250px;
   padding: 10px 0 0;
 }
-.info .about .box > div label .toggle-switch{
-height: 20px;
+.info .about .box > div label .toggle-switch {
+  height: 20px;
 }
-@media (max-width: 767px){
-  .info .about .box > div label .toggle-switch{
+@media (max-width: 767px) {
+  .info .about .box > div label .toggle-switch {
     margin: 0 auto;
-    }
+  }
 }
-.info .about .box > div label .toggle-switch::before{
-width: 16px;
-height: 16px;
-top: 2px;
+.info .about .box > div label .toggle-switch::before {
+  width: 16px;
+  height: 16px;
+  top: 2px;
 }
-.info .about .box > div label .toggle-checkbox:checked + .toggle-switch::before {
+.info
+  .about
+  .box
+  > div
+  label
+  .toggle-checkbox:checked
+  + .toggle-switch::before {
   left: 61px;
 }
-@media (min-width: 768px){
-.info .about::before{
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 2px;
-  height: calc(100% - 50px);
-  background-color: #eee;
-}
+@media (min-width: 768px) {
+  .info .about::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 2px;
+    height: calc(100% - 50px);
+    background-color: #eee;
+  }
 }
 /* End information widget */
 /* Start Other Data */
@@ -955,27 +961,27 @@ top: 2px;
 /* ** Noting **/
 /* End Skills */
 /* Start Activities */
-.activities .row-activities{
+.activities .row-activities {
   margin-bottom: 15px;
 }
-@media (max-width:767px){
+@media (max-width: 767px) {
   .activities .row-activities {
-  flex-direction: column;
+    flex-direction: column;
   }
 }
-.activities .row-activities img{
+.activities .row-activities img {
   margin-right: 10px;
 }
-.activities .row-activities .date{
+.activities .row-activities .date {
   margin-left: auto;
   text-align: right;
 }
-@media (max-width:767px){
-  .activities .row-activities img{
+@media (max-width: 767px) {
+  .activities .row-activities img {
     margin: 0;
     margin-bottom: 15px;
   }
-  .activities .row-activities .date{
+  .activities .row-activities .date {
     margin-top: 20px;
   }
 }
@@ -993,66 +999,95 @@ top: 2px;
     margin: 0 10px;
   }
 }
-.projects-page .widget-dash > span{
+.projects-page .widget-dash > span {
   position: absolute;
   top: 5px;
   right: 5px;
 }
 @media (max-width: 767px) {
-  .projects-page .widget-dash .team{
+  .projects-page .widget-dash .team {
     display: flex;
     gap: 20px;
-  justify-content: center;
+    justify-content: center;
   }
-  .projects-page .widget-dash a:not(:first-of-type) img{
-  margin-left: 0;
+  .projects-page .widget-dash a:not(:first-of-type) img {
+    margin-left: 0;
   }
-  .projects-page .widget-dash:hover a:hover img{
+  .projects-page .widget-dash:hover a:hover img {
     transform: scale(1.5);
   }
-  .projects-page .widget-dash .skills{
+  .projects-page .widget-dash .skills {
     flex-wrap: wrap;
-justify-content: center;
+    justify-content: center;
   }
-  .projects-page .widget-dash .skills span:not(:last-of-type){
+  .projects-page .widget-dash .skills span:not(:last-of-type) {
     margin-bottom: 5px;
   }
 }
-.projects-page .widget-dash .team{
+.projects-page .widget-dash .team {
   position: relative;
   min-height: 80px;
 }
-.projects-page .widget-dash .team a{
+.projects-page .widget-dash .team a {
   position: absolute;
   top: 0;
   left: 0;
 }
-.projects-page .widget-dash .team a:nth-child(2){
-  left:25px ;
+.projects-page .widget-dash .team a:nth-child(2) {
+  left: 25px;
 }
-.projects-page .widget-dash .team a:nth-child(3){
-  left:50px ;
+.projects-page .widget-dash .team a:nth-child(3) {
+  left: 50px;
 }
-.projects-page .widget-dash .team a:nth-child(4){
-  left:75px;
+.projects-page .widget-dash .team a:nth-child(4) {
+  left: 75px;
 }
-.projects-page .widget-dash .team a:nth-child(5){
-  left: 100px ;
+.projects-page .widget-dash .team a:nth-child(5) {
+  left: 100px;
 }
-.projects-page .widget-dash .team a:hover{
+.projects-page .widget-dash .team a:hover {
   z-index: 1000;
 }
-.projects-page .widget-dash .team img{
+.projects-page .widget-dash .team img {
   border: 2px solid white;
 }
 
-.projects-page .widget-dash .progress{
+.projects-page .widget-dash .progress {
   width: 200px;
   height: 8px;
 }
-.projects-page .widget-dash .progress span{
+.projects-page .widget-dash .progress span {
   position: absolute;
   height: 100%;
   left: 0;
 }
 /* End Projects Page */
+/* Start Courses Page */
+.course-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 20px;
+}
+@media (max-width: 767px) {
+  .course-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin: 0 10px;
+  }
+}
+.course-page > .card > .avatar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.course-page > .card > .details .btn {
+  display: block;
+  background-color: var(--blue-color);
+  padding: 4px 10px;
+  color: white;
+  border-radius: 6px;
+  position: absolute;
+  height: 31px;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* End Courses Page */
