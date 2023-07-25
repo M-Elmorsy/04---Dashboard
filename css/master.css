@@ -1172,6 +1172,7 @@ table span.label {
 /* Start Files Page */
 .files-page {
   display: flex;
+  align-items: start;
 }
 .files-page .files {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
