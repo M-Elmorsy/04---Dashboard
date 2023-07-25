@@ -1178,6 +1178,10 @@ table span.label {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 @media (max-width: 767px) {
+  .files-page{
+    flex-direction: column-reverse;
+    align-items: normal;
+  }
   .files-page .files {
     grid-template-columns: minmax(200px, 1fr);
     margin: 0 10px;
