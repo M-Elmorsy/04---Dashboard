@@ -885,6 +885,17 @@ table span.label {
 /* End Sittings Page */
 /* Start Profile Page */
 /* Start information widget */
+.profile-page .other-data .skills {
+  width: 245px;
+}
+.profile-page .other-data .skills .line {
+  transition: var(--main-transition);
+}
+.profile-page .other-data .skills .line:hover {
+  gap: 50px;
+  font-weight: bold;
+  color: rgb(119, 110, 110);
+}
 @media (max-width: 767px) {
   .info {
     flex-direction: column;
@@ -993,11 +1004,31 @@ table span.label {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   margin: 20px;
 }
+.projects-page .widget-dash .skills span {
+  transition: var(--main-transition);
+}
+.projects-page .widget-dash:hover .skills span {
+  font-weight: bold;
+  margin-right: 10px;
+}
 @media (max-width: 767px) {
   .projects-page {
     grid-template-columns: minmax(200px, 1fr);
     margin: 0 10px;
   }
+}
+.projects-page .widget-dash {
+  transition: var(--main-transition);
+}
+.projects-page .widget-dash:hover {
+  box-shadow: 0px 0px 10px #ccc;
+}
+.projects-page .widget-dash h3 {
+  transition: var(--main-transition);
+}
+.projects-page .widget-dash:hover h3 {
+  animation: mlt-color 2.5s linear infinite;
+  font-weight: bold;
 }
 .projects-page .widget-dash > span {
   position: absolute;
@@ -1020,7 +1051,7 @@ table span.label {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .projects-page .widget-dash .skills span:not(:last-of-type) {
+  .projects-page .widget-dash .skills span {
     margin-bottom: 5px;
   }
 }
@@ -1073,6 +1104,22 @@ table span.label {
     margin: 0 10px;
   }
 }
+.course-page > .card .details a {
+  transition: var(--main-transition);
+}
+@media (min-width: 768px) {
+  .course-page > .card {
+    transition: var(--main-transition);
+  }
+  .course-page > .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px #ccc;
+  }
+}
+.course-page > .card:hover .details a {
+  animation: flicker 1.5s infinite;
+  background-color: var(--blue-alt-color);
+}
 .course-page > .card > .avatar {
   position: absolute;
   top: 20px;
@@ -1091,3 +1138,140 @@ table span.label {
   transform: translateX(-50%);
 }
 /* End Courses Page */
+/* Start Friends Page */
+.friends-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 20px;
+}
+@media (max-width: 767px) {
+  .friends-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin: 0 10px;
+  }
+}
+.friends-page .card-friend .contact {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.friends-page .card-friend .contact a {
+  transition: var(--main-transition);
+}
+.friends-page .card-friend .contact a:hover {
+  color: white;
+  background-color: var(--blue-color);
+  transform: scale(1.3);
+}
+.friends-page .card-friend .date .action a:first-of-type span {
+  background-color: var(--blue-color);
+}
+.friends-page .card-friend .date .action a:last-of-type span {
+  background-color: var(--red-color);
+}
+/* End Friends Page */
+/* Start Files Page */
+.files-page {
+  display: flex;
+}
+.files-page .files {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+@media (max-width: 767px) {
+  .files-page .files {
+    grid-template-columns: minmax(200px, 1fr);
+    margin: 0 10px;
+  }
+}
+.files-page .files .file-box i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.files-page .files .file-box img {
+  transition: var(--main-transition);
+}
+.files-page .files .file-box:hover img {
+  transform: rotate(5deg) scale(1.2);
+}
+.files-page .stat .box{
+  transition: var(--main-transition);
+}
+.files-page .stat .box:hover{
+  box-shadow: 0 0 10px #ccc;
+  transform: scale(1.1);
+}
+.files-page .stat .box:nth-of-type(1) i{
+  background-color: rgb(0 117 255 / 20%);
+  color: var(--blue-color);
+}
+.files-page .stat .box:nth-of-type(2) i{
+  background-color: rgb(34 197 94 / 20%);
+color: var(--green-color);
+}
+.files-page .stat .box:nth-of-type(3) i{
+  background-color: rgb(244 67 54 / 20%);
+  color: var(--red-color);
+}
+.files-page .stat .box:nth-of-type(4) i{
+color: var(--orange-color);
+background-color: rgb(245 158 11 / 20%);
+}
+.files-page .stat a{
+  padding: 5px 15px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+.files-page .stat .go-up{
+  color: white;
+  font-size: 18px;
+}
+.files-page .stat a:hover .go-up {
+  animation: bounce 1s infinite;
+}
+/* End Files Page */
+/* Start Plans Page */
+.plans-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+@media (max-width: 767px) {
+  .plans-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin: 0 10px;
+  }
+}
+.plans-page .info span::before {
+  content: "\24";
+  font-size: 25px;
+  position: absolute;
+  top: -5px;
+  left: 145px;
+  font-family: inherit;
+  font-weight: 400;
+}
+.plans-page .type a {
+  margin-top: 15px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+
+.plans-page .free a{
+  background: var(--green-color);
+} 
+.plans-page .free a:hover{
+  background-color :rgb(34 197 94 / 90%);
+}
+.plans-page .basic a{
+  background: var(--blue-color);
+} 
+.plans-page .basic a:hover{
+  background: rgb(0 117 255 / 90%);
+}
+.plans-page .premium a{
+  background: var(--orange-color);
+} 
+.plans-page .premium a:hover{
+  background: rgb(245 158 11 / 90%);
+}
+/* End Plans Page */
